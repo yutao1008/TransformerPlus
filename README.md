@@ -68,19 +68,12 @@ python train.py \
 - TODO:
 	- Load vocabulary.
 	- Perform decoding after the translation.
----
-# Performance
-## Training
 
-<p align="center">
-<img src="https://i.imgur.com/S2EVtJx.png" width="400">
-<img src="https://i.imgur.com/IZQmUKO.png" width="400">
-</p>
 
 - Parameter settings:
   - batch size 512 
   - warmup step 4000 
-  - epoch 200 
+  - epoch 100 
   - lr_mul 0.5
   - label smoothing 
   - do not apply BPE and shared vocabulary
