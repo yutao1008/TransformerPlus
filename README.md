@@ -80,14 +80,4 @@ python train.py \
   - target embedding / pre-softmax linear layer weight sharing. 
  
   
-## Testing 
-- coming soon.
----
-# TODO
-  - Evaluation on the generated text.
-  - Attention weight plot.
----
-# Acknowledgement
-- The byte pair encoding parts are borrowed from [subword-nmt](https://github.com/rsennrich/subword-nmt/).
-- The project structure, some scripts and the dataset preprocessing steps are heavily borrowed from [OpenNMT/OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py).
-- Thanks for the suggestions from @srush, @iamalbert, @Zessay, @JulesGM, @ZiJianZhao, and @huanghoujing.
+
