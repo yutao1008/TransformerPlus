@@ -76,20 +76,6 @@ python train.py \
   -epoch 120
 ```
 
-### 3) Test the model (not ready)
-- TODO:
-	- Load vocabulary.
-	- Perform decoding after the translation.
-
-
-- Parameter settings:
-  - batch size 512 
-  - warmup step 4000 
-  - epoch 100 
-  - lr_mul 0.5
-  - label smoothing 
-  - do not apply BPE and shared vocabulary
-  - target embedding / pre-softmax linear layer weight sharing. 
  
   
 
