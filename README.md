@@ -31,7 +31,18 @@ python preprocess.py -lang_src de -lang_trg en -share_vocab -save_data m30k_deen
 
 ### 2) Train the model
 ```bash
-python train.py -data_pkl m30k_deen_shr.pkl -log m30k_deen_shr -embs_share_weight -proj_share_weight -label_smoothing -output_dir output -b 256 -warmup 128000 -epoch 400
+python train.py \
+-data_pkl m30k_deen_shr.pkl \
+-label_smoothing \
+-proj_share_weight \
+-scale_emb_or_prj emb \
+-h_attn \
+-v_attn \
+-lr_mul 0.5 \
+-b 512 \
+-warmup 4000 \
+-epoch 100 \
+-output_dir output/wmt16_hv 
 ```
 
 ### 3) Test the model
@@ -51,17 +62,18 @@ python preprocess.py -raw_dir /tmp/raw_deen -data_dir ./bpe_deen -save_data bpe_
 ### 2) Train the model
 ```bash
 python train.py \
-  -data_pkl m30k_deen_shr.pkl \
-  -label_smoothing \
+  -data_pkl ./bpe_deen/bpe_vocab.pkl \
+  -train_path ./bpe_deen/deen-train \
+  -val_path ./bpe_deen/deen-val \
+  -embs_share_weight \
   -proj_share_weight \
-  -scale_emb_or_prj emb \
+  -label_smoothing \
   -h_attn \
   -v_attn \
-  -lr_mul 0.5 \
-  -b 512 \
-  -warmup 4000 \
-  -epoch 100 \
-  -output_dir output/wmt16_hv 
+  -output_dir output/wmt17_hv \
+  -b 256 \
+  -warmup 128000 \
+  -epoch 120
 ```
 
 ### 3) Test the model (not ready)
